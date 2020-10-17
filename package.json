@@ -3,10 +3,16 @@
 	"displayName": "inlineSearch",
 	"description": "inlineSeacrchBaidu",
 	"publisher": "zrrz",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.50.0"
 	},
+	"keywords": [
+		"baidu",
+		"query",
+		"select",
+		"鑫家网"
+	],
 	"categories": [
 		"Other"
 	],
@@ -18,9 +24,17 @@
 		"commands": [
 			{
 				"command": "inlineSearch.text",
-				"title": "searchSelect"
+				"title": "百度查询"
 			}
-		]
+		],
+		"keybindings": [
+			{
+					"command": "inlineSearch.text",
+					"key": "alt+f2",
+					"mac": "cmd+f2",
+					"when": "editorFocus"
+			}
+	]
 	},
 	"scripts": {
 		"lint": "eslint .",
