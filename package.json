@@ -17,7 +17,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:inlineSearch.text"
+		"*"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -25,16 +25,20 @@
 			{
 				"command": "inlineSearch.text",
 				"title": "百度查询"
+			},
+			{
+				"command": "inlineSearch.quickPick",
+				"title": "百度查询QuickPick"
 			}
 		],
 		"keybindings": [
 			{
-					"command": "inlineSearch.text",
-					"key": "alt+f2",
-					"mac": "cmd+f2",
-					"when": "editorFocus"
+				"command": "inlineSearch.text",
+				"key": "alt+f2",
+				"mac": "cmd+f2",
+				"when": "editorFocus"
 			}
-	]
+		]
 	},
 	"scripts": {
 		"lint": "eslint .",
@@ -52,5 +56,7 @@
 		"typescript": "^4.0.2",
 		"vscode-test": "^1.4.0"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"axios": "^0.20.0"
+	}
 }
